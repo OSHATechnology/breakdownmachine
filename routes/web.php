@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DetailMesinController;
 use App\Http\Controllers\JenisMesinController;
 use App\Http\Controllers\MesinController;
@@ -16,9 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('components.dashboard');
-});
+// Route::get('/', function () {
+//     return view('components.dashboard');
+// });
+
+// Dashboard
+Route::get('/',[DashboardController::class, 'index']);
 
 // Mesin
 Route::get('/mesin',[MesinController::class, 'index']);
