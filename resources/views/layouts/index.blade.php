@@ -3,9 +3,10 @@
 
 <head>
   <!-- Required meta tags -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>Breakdown Machine Prediction</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset('assets')}}/vendors/feather/feather.css">
   <link rel="stylesheet" href="{{asset('assets')}}/vendors/ti-icons/css/themify-icons.css">
@@ -15,11 +16,13 @@
   <link rel="stylesheet" href="{{asset('assets')}}/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
   <link rel="stylesheet" href="{{asset('assets')}}/vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/js/select.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="{{asset('assets')}}/css/custom.css">
   <link rel="stylesheet" href="{{asset('assets')}}/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('assets')}}/images/favicon.png" />
+  <link rel="shortcut icon" href="{{asset('assets')}}/images/toyota1.png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -221,6 +224,10 @@
   <script src="{{asset('assets')}}/vendors/datatables.net/jquery.dataTables.js"></script>
   <script src="{{asset('assets')}}/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <script src="{{asset('assets')}}/js/dataTables.select.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
@@ -234,6 +241,9 @@
   <script src="{{asset('assets')}}/js/dashboard.js"></script>
   <script src="{{asset('assets')}}/js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page-->
+
+  @yield('javascript')
+
 </body>
 
 </html>

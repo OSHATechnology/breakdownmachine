@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('next_maintenance');
             $table->string('condition',15);
             $table->integer('breakdown_possibility');
+            $table->string('kode_mesin',50);
             $table->timestamps();
         });
     }

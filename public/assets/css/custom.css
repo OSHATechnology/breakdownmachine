@@ -1,0 +1,27 @@
+.ta-c {
+    text-align: center;
+}
+.card {
+    border-radius: 8px !important;
+}
+a{
+    color: #fff !important;
+}
+a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.card.card-light-orange {
+    background: #ff7a00;
+    color: #ffffff;
+}
+.card.card-light-green {
+    background: #17dd10;
+    color: #ffffff;
+}
+.navbar .navbar-brand-wrapper .brand-logo img {
+    height: 60px!important;
+}
+.navbar .navbar-brand-wrapper .brand-logo-mini img {
+    height: 40px!important;
+}

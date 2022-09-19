@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('mesins', function (Blueprint $table) {
             $table->id();
             $table->string('nama_mesin',30);
+            $table->string('kode_mesin',50);
             $table->timestamps();
         });
     }

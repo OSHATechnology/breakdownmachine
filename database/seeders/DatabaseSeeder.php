@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\DetailMesin;
+use App\Models\JenisMesin;
+use App\Models\Mesin;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +18,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DetailMesin::factory(50)->create();
+        JenisMesin::factory(50)->create();
+        Mesin::factory(50)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
