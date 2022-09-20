@@ -32,7 +32,7 @@
         <div class="col-md-4 mb-4 stretch-card transparent">
           <div class="card card-tale">
             <div class="card-body">
-              <p class="mb-4">Total Mesin</p>
+              <p class="mb-4">Total Machine</p>
               <p class="fs-30 mb-2">{{$mesin->count();}}</p>
               <p>Click Here</p>
             </div>
@@ -108,15 +108,19 @@
                                                                            $tmpDateMaintenance = date_create($data_maintenance[$i]->next_maintenance);
                                                                            $dateMaintenance = date_format($tmpDateMaintenance, 'd M Y');
                                                                            $date_diff = date_diff($newDate, $tmpDateMaintenance);
+                                                                           $progress = 100 - $date_diff->days;
                                                                       ?>
                                                                       <tr>
                                                                            <td class="text-muted">{{$dateMaintenance}} ({{$data_maintenance[$i]->total}} Unit)</td>
                                                                            <td class="w-100 px-0">
                                                                                 <div class="progress progress-md mx-4">
                                                                                      @if($newDate > $tmpDateMaintenance)
+                                                                                          <?php 
+
+                                                                                          ?>
                                                                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                                                                      @else
-                                                                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                          <div class="progress-bar bg-primary" role="progressbar" style="width: {{$progress}}%" aria-valuenow="{{$progress}}" aria-valuemin="0" aria-valuemax="100"></div>
                                                                                      @endif
                                                                                 </div>
                                                                            </td>
@@ -124,7 +128,7 @@
                                                                                 @if($newDate > $tmpDateMaintenance)
                                                                                      <p class="mb-2 mb-xl-0">Late {{$date_diff->days}} days</p>
                                                                                 @else
-                                                                                     <p class="mb-2 mb-xl-0">{{$date_diff->days}} days</p>
+                                                                                     <p class="mb-2 mb-xl-0">{{$date_diff->days}} days left</p>
                                                                                 @endif
                                                                            </td>
                                                                       </tr>

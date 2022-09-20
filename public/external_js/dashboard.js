@@ -35,7 +35,7 @@ $(document).ready(function() {
                 var latest_maintenance_date = new Date(result.latest_maintenance);
                 var next_maintenance_date = new Date(result.next_maintenance);
                 var li = '<li>'+
-                            '<h4>ID Machine</h4>'+
+                            '<h4>Machine Code</h4>'+
                             '<p>'+result.kode_mesin+'</p>'+
                             '<p class="text-muted mb-4">'+
                             '</p>' +
