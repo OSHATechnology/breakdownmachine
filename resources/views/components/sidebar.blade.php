@@ -15,7 +15,7 @@
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="/mesin">Mesin</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/jenismesin">Jenis Mesin</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/categorymesin">Category Mesin</a></li>
                     <li class="nav-item"> <a class="nav-link" href="/detailmesin">Detail Mesin</a></li>
                 </ul>
             </div>

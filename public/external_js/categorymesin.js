@@ -10,13 +10,12 @@ $(document).ready(function() {
         serverSide: true,
         responsive: true,
         ajax: {
-            url: 'jenismesin',
+            url: 'categorymesin',
             type: 'GET'
         },
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'nama_jenis', name:'nama_jenis'},
-            {data: 'kode_mesin', name:'kode_mesin'},
+            {data: 'category', name:'category'},
             {data: 'action', name:'action'},
         ],
         order: [[0, 'asc']]

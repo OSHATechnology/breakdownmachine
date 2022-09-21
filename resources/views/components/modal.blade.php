@@ -1,6 +1,3 @@
-
-{{-- <button type="button" class="btn btn-inverse-warning btn-rounded btn-icon" data-toggle="modal" data-target="#modalMachine">8C</button> --}}
-
 <div class="modal fade" id="modalMachine" tabindex="-1" role="dialog" aria-labelledby="modalMachineTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">

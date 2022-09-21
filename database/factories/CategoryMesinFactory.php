@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\JenisMesin>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\CategoryMesin>
  */
-class JenisMesinFactory extends Factory
+class CategoryMesinFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,7 @@ class JenisMesinFactory extends Factory
     public function definition()
     {
         return [
-            'nama_jenis' => fake()->name(),
-            'kode_mesin' => fake()->iban('KodeMesin')
+            //
         ];
     }
 }

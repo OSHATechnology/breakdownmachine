@@ -15,8 +15,11 @@ return new class extends Migration
     {
         Schema::create('mesins', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_mesin',30);
-            $table->string('kode_mesin',50);
+            $table->bigInteger('id_category');
+            $table->string('kode_mesin',10);
+            $table->string('nama',30);
+            $table->text('fungsi');
+            $table->enum('status',['Bergerak','Tidak Bergerak','null']);
             $table->timestamps();
         });
     }

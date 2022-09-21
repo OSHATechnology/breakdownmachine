@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryMesinController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DetailMesinController;
-use App\Http\Controllers\JenisMesinController;
 use App\Http\Controllers\MesinController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,8 +27,8 @@ Route::get('/',[DashboardController::class, 'index']);
 // Mesin
 Route::get('/mesin',[MesinController::class, 'index']);
 
-// JenisMesin
-Route::get('/jenismesin',[JenisMesinController::class, 'index']);
+// CategoryMesin
+Route::get('/categorymesin',[CategoryMesinController::class, 'index']);
 
 // Detail Mesin
 Route::get('/detailmesin',[DetailMesinController::class, 'index']);

@@ -14,8 +14,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Mesin</th>
-                                    <th>Kode Mesin</th>
+                                    <th>Machine Code</th>
+                                    <th>Machine Name</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

@@ -14,14 +14,14 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>ID Nama</th>
-                                    <th>ID Jenis</th>
+                                    <th>Machine</th>
+                                    <th>Component</th>
                                     <th>Type</th>
                                     <th>Latest Maintenance</th>
                                     <th>Next Maintenance</th>
                                     <th>Condition</th>
                                     <th>Breakdown Possibility</th>
-                                    <th>Kode Mesin</th>
+                                    <th>Machine Code</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

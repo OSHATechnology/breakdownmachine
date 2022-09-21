@@ -15,8 +15,8 @@ $(document).ready(function() {
         },
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'id_nama', name:'id_nama'},
-            {data: 'id_jenis', name:'id_jenis'},
+            {data: 'id_mesin', name:'id_mesin'},
+            {data: 'nama', name:'nama'},
             {data: 'type', name:'type'},
             {data: 'latest_maintenance', name:'latest_maintenance'},
             {data: 'next_maintenance', name:'next_maintenance'},

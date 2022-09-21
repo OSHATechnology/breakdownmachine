@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JenisMesin;
+use App\Models\CategoryMesin;
 use Illuminate\Http\Request;
 
-class JenisMesinController extends Controller
+class CategoryMesinController extends Controller
 {
     public function index(Request $request){
-        $data = JenisMesin::all();
+        $data = CategoryMesin::all();
         if ($request->ajax()) {
             return datatables()->of($data)
             ->addColumn('action', function ($data) {
@@ -23,6 +23,6 @@ class JenisMesinController extends Controller
             ->addIndexColumn()
             ->make(true);
         }
-        return view('components.jenismesin.index');
+        return view('components.category.index');
     }
 }

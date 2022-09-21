@@ -15,8 +15,8 @@ $(document).ready(function() {
         },
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'nama_mesin', name:'nama_mesin'},
             {data: 'kode_mesin', name:'kode_mesin'},
+            {data: 'nama', name:'nama'},
             {data: 'action', name:'action'},
         ],
         order: [[0, 'asc']]

@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jenis_mesins', function (Blueprint $table) {
+        Schema::create('category_mesins', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_jenis',30);
-            $table->string('kode_mesin',50);
+            $table->enum('category',['Komponen','Sistem']);
+            $table->enum('status',['active','deactive']);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jenis_mesins');
+        Schema::dropIfExists('category_mesins');
     }
 };

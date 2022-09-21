@@ -42,7 +42,7 @@
           <div class="card card-tale">
             <div class="card-body">
               <p class="mb-4">Total Komponen Mesin</p>
-              <p class="fs-30 mb-2">{{$jmesin->count();}}</p>
+              <p class="fs-30 mb-2">{{$cmesin->count();}}</p>
               <p>10.00% (30 days)</p>
             </div>
           </div>

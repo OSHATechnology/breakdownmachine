@@ -5,7 +5,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Table Jenis Mesin</h4>
+                    <h4 class="card-title">Table Category Mesin</h4>
                     {{-- <p class="card-description">Add class <code>.table-bordered</code></p> --}}
                     
                     <button class="btn btn-primary btn-add float-right" type="button" title="Add New"><i class="bi bi-plus"></i> Add New</button>
@@ -14,8 +14,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Jenis</th>
-                                    <th>Kode Mesin</th>
+                                    <th>Category Name</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -26,7 +25,7 @@
         </div>
     </div>
     @section('javascript')
-        <script type="text/javascript" src="{{asset('external_js/jenismesin.js')}}"></script>
+        <script type="text/javascript" src="{{asset('external_js/categorymesin.js')}}"></script>
     @endsection
 </div>
 @endsection

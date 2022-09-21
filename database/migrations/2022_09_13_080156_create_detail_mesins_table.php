@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('detail_mesins', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_nama');
-            $table->bigInteger('id_jenis');
+            $table->bigInteger('id_mesin');
+            $table->string('nama',50);
             $table->string('type',20);
             $table->date('latest_maintenance');
             $table->date('next_maintenance');
-            $table->string('condition',15);
+            $table->enum('condition',['very good','good','bad']);
             $table->integer('breakdown_possibility');
-            $table->string('kode_mesin',50);
+            $table->string('kode_mesin',10);
             $table->timestamps();
         });
     }
