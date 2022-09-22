@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DetailMesin;
-use App\Models\JenisMesin;
+use App\Models\CategoryMesin;
 use App\Models\Mesin;
 use Illuminate\Http\Request;
 use DB;
@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
      public function index(){
           $mesin = Mesin::all();
-          $jmesin = JenisMesin::all();
+          $cmesin = CategoryMesin::all();
           $dmesin = DetailMesin::all();
           $date = date_create($dmesin->min('next_maintenance'));
 
@@ -28,7 +28,7 @@ class DashboardController extends Controller
                     ->get();
 
           $format_Date = date_format($date, 'd M Y');
-          return view('components.dashboard',compact('mesin','jmesin','dmesin', 'format_Date', 'data_possibility', 'data_maintenance'));
+          return view('components.dashboard',compact('mesin','cmesin','dmesin', 'format_Date', 'data_possibility', 'data_maintenance'));
     }
 
     public function search($word)
