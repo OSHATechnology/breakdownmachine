@@ -34,8 +34,8 @@ class DashboardController extends Controller
     public function search($word)
     {
         $data = DetailMesin::query()
-                ->join('mesins', 'mesins.id', '=', 'detail_mesins.id_nama')
-                ->join('jenis_mesins', 'jenis_mesins.id', '=', 'detail_mesins.id_jenis')
+                ->join('mesins', 'mesins.id', '=', 'detail_mesins.id_mesin')
+                ->join('category_mesins', 'category_mesins.id', '=', 'mesins.id_category')
                 ->where('detail_mesins.kode_mesin', 'LIKE', "%$word%")
                 ->orWhere('detail_mesins.nama', 'LIKE', "%$word%")
                 ->first();
