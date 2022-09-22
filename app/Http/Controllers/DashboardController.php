@@ -6,8 +6,7 @@ use App\Models\DetailMesin;
 use App\Models\CategoryMesin;
 use App\Models\Mesin;
 use Illuminate\Http\Request;
-use DB;
-use Illuminate\Support\Facades\DB as FacadesDB;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -17,7 +16,7 @@ class DashboardController extends Controller
           $dmesin = DetailMesin::all();
           $date = date_create($dmesin->min('next_maintenance'));
 
-          $data_possibility = DB::table('detail_mesins')
+          $data_possibility =DB::table('detail_mesins')
                     ->select('breakdown_possibility', DB::raw('count(breakdown_possibility) as total'))
                     ->groupBy('breakdown_possibility')
                     ->get();

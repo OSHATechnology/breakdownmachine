@@ -4,9 +4,6 @@
 .card {
     border-radius: 8px !important;
 }
-a{
-    color: #fff !important;
-}
 a:hover {
     color: #fff !important;
     text-decoration: none !important;
