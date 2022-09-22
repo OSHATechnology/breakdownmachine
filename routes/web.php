@@ -28,9 +28,11 @@ Route::get('/chartDonutPossibility',[DashboardController::class, 'chartDonutPoss
 
 // Mesin
 Route::get('/mesin',[MesinController::class, 'index']);
+Route::get('/mesin/{id}',[MesinController::class, 'breakdown']);
 
 // CategoryMesin
 Route::get('/categorymesin',[CategoryMesinController::class, 'index']);
 
 // Detail Mesin
 Route::get('/detailmesin',[DetailMesinController::class, 'index']);
+Route::get('/detailmesin/{id}',[DetailMesinController::class, 'detail']);

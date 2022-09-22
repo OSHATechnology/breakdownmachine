@@ -217,6 +217,7 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="{{asset('assets')}}/vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
@@ -226,7 +227,6 @@
   <script src="{{asset('assets')}}/js/dataTables.select.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
   <!-- End plugin js for this page -->

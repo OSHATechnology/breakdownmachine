@@ -10,7 +10,7 @@
                     
                     <button class="btn btn-primary btn-add float-right" type="button" title="Add New"><i class="bi bi-plus"></i> Add New</button>
                     <div class="table-responsive pt-3">
-                        <table id="myTable" class="display" style="width:100%">
+                        <table id="myTableDetail" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -31,6 +31,7 @@
             </div>
         </div>
     </div>
+    @include('components.modal.detail')
     @section('javascript')
         <script type="text/javascript" src="{{asset('external_js/detailmesin.js')}}"></script>
     @endsection

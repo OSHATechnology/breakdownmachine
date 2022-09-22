@@ -25,4 +25,9 @@ class DetailMesinController extends Controller
         }
         return view('components.detailmesin.index');
     }
+    public function detail($id){
+        $data = DetailMesin::find($id);
+        // dd($data);
+        return response()->json($data);
+    }
 }

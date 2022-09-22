@@ -438,7 +438,7 @@
     </div>
   </div>
 
-  @include('components.modal')
+  {{-- @include('components.modal') --}}
 
   @section('javascript')
         <script type="text/javascript" src="{{asset('external_js/dashboard.js')}}"></script>

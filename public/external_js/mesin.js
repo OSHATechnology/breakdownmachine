@@ -21,4 +21,9 @@ $(document).ready(function() {
         ],
         order: [[0, 'asc']]
     });
+    $('body').on('click','.view',function(){
+        var data_id = $(this).data('id');
+        console.log(data_id, 'test')
+        window.location.href='/mesin/'+data_id
+    });
 });
