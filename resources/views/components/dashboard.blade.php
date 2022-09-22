@@ -41,15 +41,9 @@
         <div class="col-md-4 mb-4 stretch-card transparent">
           <div class="card card-tale">
             <div class="card-body">
-<<<<<<< HEAD
               <p class="mb-4">Total Komponen Mesin</p>
               <p class="fs-30 mb-2">{{$cmesin->count();}}</p>
               <p>10.00% (30 days)</p>
-=======
-              <p class="mb-4">Total Machine Components</p>
-              <p class="fs-30 mb-2">{{$jmesin->count();}}</p>
-              <p>Click Here</p>
->>>>>>> fa3b1b46c63f1a1f3080eea1682d468f66deb1fa
             </div>
           </div>
         </div>
