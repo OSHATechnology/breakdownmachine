@@ -34,110 +34,31 @@
             <div class="card-body">
               <p class="mb-4">Total Machine</p>
               <p class="fs-30 mb-2">{{$mesin->count();}}</p>
-              {{-- <p>Click Here</p> --}}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 stretch-card transparent">
-          <div class="card card-tale">
-            <div class="card-body">
-              <p class="mb-4">Total Komponen Mesin</p>
-              <p class="fs-30 mb-2">{{$cmesin->count();}}</p>
-              {{-- <p>10.00% (30 days)</p> --}}
-            </div>
-          </div>
-        </div>
+              <p class="mb-4">Total Components</p>
         <div class="col-md-4 mb-4 stretch-card transparent">
           <div class="card card-dark-blue">
             <div class="card-body">
               <p class="mb-4">Total Machine Details</p>
               <p class="fs-30 mb-2">{{$dmesin->count();}}</p>
+<<<<<<< HEAD
               {{-- <p>Click Here</p> --}}
+=======
+>>>>>>> bd712f6334e7e96f4bea6f7d1a1ffc48acdba0da
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-          <div class="card card-light-blue">
-            <div class="card-body">
-              <p class="mb-4">Lowest Breakdown Possibility</p>
-              <p class="fs-30 mb-2">{{$dmesin->min('breakdown_possibility');}}%</p>
-              {{-- <p>Click Here</p> --}}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 stretch-card transparent">
           <div class="card card-light-danger">
-            <div class="card-body">
-              <p class="mb-4">Nearest Maintenance</p>
               <p class="fs-30 mb-2">{{$format_Date;}}</p>
+<<<<<<< HEAD
               {{-- <p>Click Here</p> --}}
+=======
+>>>>>>> bd712f6334e7e96f4bea6f7d1a1ffc48acdba0da
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-     <div class="row">
-          <div class="col-md-12 grid-margin stretch-card">
-               <div class="card position-relative">
-                    <div class="card-body">
-                         <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
-                              <div class="row">
-                                   <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
-                                        <div class="ml-xl-4 mt-3">
-                                             <p class="card-title">Detailed Data</p>
-                                             <h1 class="text-primary">{{$data_maintenance->count()}}</h1>
-                                             <h3 class="font-weight-500 mb-xl-4 text-primary">Maintenance Date</h3>
-                                             <p class="mb-2 mb-xl-0"></p>
-                                        </div>  
-                                   </div>
-                                   <div class="col-md-12 col-xl-9">
-                                        <div class="row">
-                                             <div class="col-md-6 border-right">
-                                                  <div class="table-responsive mb-3 mb-md-0 mt-3">
-                                                       <table class="table table-borderless report-table">
-                                                            @for($i = 0; $i < $data_maintenance->count(); $i++)
-                                                                 @if($i < 7)
-                                                                      <?php 
-                                                                           $date = new Date();
-                                                                           $newDate = date("Y-m-d");
-                                                                           $newDate = date_create($newDate);
-                                                                           $tmpDateMaintenance = date_create($data_maintenance[$i]->next_maintenance);
-                                                                           $dateMaintenance = date_format($tmpDateMaintenance, 'd M Y');
-                                                                           $date_diff = date_diff($newDate, $tmpDateMaintenance);
-                                                                           $progress = 100 - $date_diff->days;
-                                                                      ?>
-                                                                      <tr>
-                                                                           <td class="text-muted">{{$dateMaintenance}} ({{$data_maintenance[$i]->total}} Unit)</td>
-                                                                           <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                     @if($newDate > $tmpDateMaintenance)
-                                                                                          <?php 
-
-                                                                                          ?>
-                                                                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                     @else
-                                                                                          <div class="progress-bar bg-primary" role="progressbar" style="width: {{$progress}}%" aria-valuenow="{{$progress}}" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                     @endif
-                                                                                </div>
-                                                                           </td>
-                                                                           <td class="text-muted">
-                                                                                @if($newDate > $tmpDateMaintenance)
-                                                                                     <p class="mb-2 mb-xl-0">Late {{$date_diff->days}} days</p>
-                                                                                @else
-                                                                                     <p class="mb-2 mb-xl-0">{{$date_diff->days}} days left</p>
-                                                                                @endif
-                                                                           </td>
-                                                                      </tr>
-                                                                 @endif
-                                                            @endfor
-                                                       </table>
                                                   </div>
-                                             </div>
-                                             <div class="col-md-6 mt-3">
                                                   <canvas id="north-america-chart"></canvas>
                                                   <div id="north-america-legend"></div>
                                              </div>
@@ -148,25 +69,6 @@
                     </div>
                </div>
           </div>
-     </div>
-  
-  <div class="row">
-    <div class="col-md-12 grid-margin stretch-card">
-      <div class="card">        
-        <div class="input-group">
-          <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-          <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-            <span class="input-group-text" id="search">
-              <i class="icon-search"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row no-result">
-  <div class="col-md-12 grid-margin">
-							<div class="card d-flex align-items-center">
 								<div class="card-body">
 									<div class="d-flex flex-row align-items-center">
 										
