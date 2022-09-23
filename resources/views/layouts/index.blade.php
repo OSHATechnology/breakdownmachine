@@ -24,7 +24,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('assets')}}/images/toyota1.png" />
 </head>
-<body class="sidebar-icon-only">
+<body>
   <div class="container-scroller">
     @include('components.header')
     <!-- partial -->
