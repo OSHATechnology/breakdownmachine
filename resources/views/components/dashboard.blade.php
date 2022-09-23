@@ -40,18 +40,12 @@
             <div class="card-body">
               <p class="mb-4">Total Machine Details</p>
               <p class="fs-30 mb-2">{{$dmesin->count();}}</p>
-<<<<<<< HEAD
               {{-- <p>Click Here</p> --}}
-=======
->>>>>>> bd712f6334e7e96f4bea6f7d1a1ffc48acdba0da
             </div>
           </div>
           <div class="card card-light-danger">
               <p class="fs-30 mb-2">{{$format_Date;}}</p>
-<<<<<<< HEAD
               {{-- <p>Click Here</p> --}}
-=======
->>>>>>> bd712f6334e7e96f4bea6f7d1a1ffc48acdba0da
             </div>
           </div>
         </div>
