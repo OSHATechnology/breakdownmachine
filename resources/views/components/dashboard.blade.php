@@ -34,18 +34,57 @@
             <div class="card-body">
               <p class="mb-4">Total Machine</p>
               <p class="fs-30 mb-2">{{$mesin->count();}}</p>
+<<<<<<< HEAD
               <p class="mb-4">Total Components</p>
+=======
+              <p>Click Here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 stretch-card transparent">
+          <div class="card card-tale">
+            <div class="card-body">
+              <p class="mb-4">Total Komponen Mesin</p>
+              <p class="fs-30 mb-2">{{$cmesin->count();}}</p>
+              <p>10.00% (30 days)</p>
+            </div>
+          </div>
+        </div>
+>>>>>>> parent of bd712f6 (fix)
         <div class="col-md-4 mb-4 stretch-card transparent">
           <div class="card card-dark-blue">
             <div class="card-body">
               <p class="mb-4">Total Machine Details</p>
               <p class="fs-30 mb-2">{{$dmesin->count();}}</p>
+<<<<<<< HEAD
               {{-- <p>Click Here</p> --}}
             </div>
           </div>
+=======
+              <p>Click Here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+          <div class="card card-light-blue">
+            <div class="card-body">
+              <p class="mb-4">Lowest Breakdown Possibility</p>
+              <p class="fs-30 mb-2">{{$dmesin->min('breakdown_possibility');}}%</p>
+              <p>Click Here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 stretch-card transparent">
+>>>>>>> parent of bd712f6 (fix)
           <div class="card card-light-danger">
               <p class="fs-30 mb-2">{{$format_Date;}}</p>
+<<<<<<< HEAD
               {{-- <p>Click Here</p> --}}
+=======
+              <p>Click Here</p>
+>>>>>>> parent of bd712f6 (fix)
             </div>
           </div>
         </div>
