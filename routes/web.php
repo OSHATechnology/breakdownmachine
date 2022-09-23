@@ -34,5 +34,5 @@ Route::get('/mesin/{id}',[MesinController::class, 'breakdown']);
 Route::get('/categorymesin',[CategoryMesinController::class, 'index']);
 
 // Detail Mesin
-Route::get('/detailmesin',[DetailMesinController::class, 'index']);
-Route::get('/detailmesin/{id}',[DetailMesinController::class, 'detail']);
+Route::get('mesin/detailmesin/{id}',[DetailMesinController::class, 'detail']);
+// Route::get('/detailmesin',[DetailMesinController::class, 'index']);

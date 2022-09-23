@@ -34,7 +34,7 @@
             <div class="card-body">
               <p class="mb-4">Total Machine</p>
               <p class="fs-30 mb-2">{{$mesin->count();}}</p>
-              <p>Click Here</p>
+              {{-- <p>Click Here</p> --}}
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
             <div class="card-body">
               <p class="mb-4">Total Komponen Mesin</p>
               <p class="fs-30 mb-2">{{$cmesin->count();}}</p>
-              <p>10.00% (30 days)</p>
+              {{-- <p>10.00% (30 days)</p> --}}
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@
             <div class="card-body">
               <p class="mb-4">Total Machine Details</p>
               <p class="fs-30 mb-2">{{$dmesin->count();}}</p>
-              <p>Click Here</p>
+              {{-- <p>Click Here</p> --}}
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
             <div class="card-body">
               <p class="mb-4">Lowest Breakdown Possibility</p>
               <p class="fs-30 mb-2">{{$dmesin->min('breakdown_possibility');}}%</p>
-              <p>Click Here</p>
+              {{-- <p>Click Here</p> --}}
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
             <div class="card-body">
               <p class="mb-4">Nearest Maintenance</p>
               <p class="fs-30 mb-2">{{$format_Date;}}</p>
-              <p>Click Here</p>
+              {{-- <p>Click Here</p> --}}
             </div>
           </div>
         </div>

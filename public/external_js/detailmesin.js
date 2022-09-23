@@ -5,7 +5,7 @@ $(document).ready(function() {
         }
     });
 
-    // $('#myTable').DataTable({
+    // $('#myTableDetail').DataTable({
     //     processing: true,
     //     serverSide: true,
     //     responsive: true,
@@ -63,14 +63,14 @@ $(document).ready(function() {
                 $('#modalMachine').modal('hide');
             })
 
-            $('#id_mesin').html(data.id_mesin);
-            $('#nama').html(data.nama);
-            $('#type').html(data.type);
-            $('#latest_maintenance').html(data.latest_maintenance);
-            $('#next_maintenance').html(data.next_maintenance);
-            $('#condition').html(data.condition);
-            $('#breakdown_possibility').html(data.breakdown_possibility);
-            $('#kode_mesin').html(data.kode_mesin);
+            $('#id_mesin').html(data[0].id_mesin);
+            $('#nama').html(data[0].nama);
+            $('#type').html(data[0].type);
+            $('#latest_maintenance').html(data[0].latest_maintenance);
+            $('#next_maintenance').html(data[0].next_maintenance);
+            $('#condition').html(data[0].condition);
+            $('#breakdown_possibility').html(data[0].breakdown_possibility);
+            $('#kode_mesin').html(data[0].kode_mesin);
         })
     });
 });
