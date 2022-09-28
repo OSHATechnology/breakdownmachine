@@ -7,9 +7,15 @@
 a{
     color: #fff !important;
 }
+a.black{
+    color: #000 !important;
+}
 a:hover {
     color: #000 !important;
     text-decoration: none !important;
+}
+a.black:hover{
+    color: #fff !important;
 }
 .card.card-light-orange {
     background: #ff7a00;
@@ -33,4 +39,15 @@ a:hover {
 }
 .list-group-item{
     padding: 10px!important;
+}
+.modal-content{
+    width: 70%!important;
+}
+.modal-bc{
+    background-color: #111111b3!important;
+}
+.modal-header .close{
+    padding: 0px!important;
+    margin: 0px!important;
+    color: #fff!important;
 }

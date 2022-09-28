@@ -17,6 +17,9 @@
                     <div class="card-body p-2">
                       <p class="fs-20 ta-c">{{$item->nama}}</p>
                     </div>
+                    {{-- <div class="chart-widget mb-2">
+                      <div id="radialbar"></div>
+                    </div> --}}
                   </a>
                 </div>
               </div>
@@ -61,7 +64,7 @@
           </div>
           <div class="row m-2 justify-content-center pt-4">
             <div class="col-md-4 mb-4 mb-lg-0 stretch-card transparent">
-              <a href="#" class="btn btn-secondary">Simulation Start</a>
+              <a href="#" class="btn btn-secondary black">Simulation Start</a>
             </div>
           </div>
         </div>
