@@ -25,3 +25,12 @@ a:hover {
 .navbar .navbar-brand-wrapper .brand-logo-mini img {
     height: 40px!important;
 }
+.modal .modal-dialog .modal-content .modal-header{
+    padding: 10px!important;
+}
+.modal .modal-dialog .modal-content .modal-body{
+    padding: 10px!important;
+}
+.list-group-item{
+    padding: 10px!important;
+}

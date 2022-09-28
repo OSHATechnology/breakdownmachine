@@ -59,6 +59,11 @@
             @endforeach
 
           </div>
+          <div class="row m-2 justify-content-center pt-4">
+            <div class="col-md-4 mb-4 mb-lg-0 stretch-card transparent">
+              <a href="#" class="btn btn-secondary">Simulation Start</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
