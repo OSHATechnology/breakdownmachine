@@ -1,5 +1,111 @@
 $(document).ready(function() {
+     $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+      });
+     var dataRandom = [];
+     $.ajax({
+          url:'/getDataMesin',
+          type:'GET',
+          dataType:'JSON',
+          async: false,
+          success: function(result) {
+               var problem = 0;
 
+               for(let o =0; o<result.length; o++) {
+                    if(result[o].breakdown_possibility < 70) problem = problem + 1;
+               }
+
+               $('.problem').html(problem)
+          },
+          error: function(err) {
+               console.log(err)
+          }
+     })
+
+     $.ajax({
+          url:'/finish',
+          type:'GET',
+          dataType:'JSON',
+          async: false,
+          success: function(result) {
+               
+
+               $('.finish').html(result)
+          },
+          error: function(err) {
+               console.log(err)
+          }
+     })
+     $('#start-simulation').on('click', function() {
+          $.ajax({
+               url:'/getDataMesin',
+               type:'GET',
+               dataType:'JSON',
+               async: false,
+               success: function(result) {
+                    dataRandom = result;
+               },
+               error: function(err) {
+                    console.log(err)
+               }
+          })
+          const lengthData = dataRandom.length
+          const randoom1 = Math.floor(Math.random() * lengthData) + 1
+          const randoom2 = Math.floor(Math.random() * lengthData) + 1
+          const randoom3 = Math.floor(Math.random() * lengthData) + 1
+
+          const randomPossibility = Math.floor(Math.random() * 50) + 20
+          const randomPossibility2 = Math.floor(Math.random() * 50) + 20
+          const randomPossibility3 = Math.floor(Math.random() * 50) + 20
+          
+          const dataUpdatePossibility = {
+               data1: {
+                    id: randoom1,
+                    possibility: randomPossibility
+               },
+               data2: {
+                    id: randoom2,
+                    possibility: randomPossibility2
+               },
+               data3: {
+                    id: randoom3,
+                    possibility: randomPossibility3
+               },
+          }
+          $.ajax({
+               url:'/updatePossibility',
+               data: dataUpdatePossibility,
+               type:'POST',
+               dataType: 'JSON',
+               success: function(results) {
+                    location.reload()
+               },
+               error: function(err) {
+                    console.log(err)
+               }
+          })
+     })
+
+     $('.repair-now').on('click', function() {
+          var data_id = $(this).data('id')
+          console.log(data_id)
+          $.ajax({
+               url: '/repair-update',
+               data: {id:data_id, breakdown_possibility: 90},
+               type: 'POST',
+               dataType: 'JSON',
+               success: function(result){
+                    $('.finish').html(result)
+                    console.log(result)
+                    // location.reload()
+               }, 
+               error: function(err) {
+                    console.log(err)
+               }
+          })
+     })
     var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     $('#search').on('click', function() {
         let search = $('#navbar-search-input').val();

@@ -251,7 +251,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Kepala Silinder',
+                'nama' => '1D',
                 'type' => 'XFJK',
                 'latest_maintenance' => '2022-09-21',
                 'next_maintenance' => '2026-09-21',
@@ -261,7 +261,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Katup Hisap',
+                'nama' => '2D',
                 'type' => 'XFJK1',
                 'latest_maintenance' => '2022-09-20',
                 'next_maintenance' => '2026-09-20',
@@ -271,7 +271,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Katup Buang',
+                'nama' => '3D',
                 'type' => 'XFJK2',
                 'latest_maintenance' => '2022-09-19',
                 'next_maintenance' => '2026-09-19',
@@ -281,7 +281,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Poros nok',
+                'nama' => '4D',
                 'type' => 'XFJK3',
                 'latest_maintenance' => '2022-09-18',
                 'next_maintenance' => '2026-09-18',
@@ -291,7 +291,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Rocker Arm',
+                'nama' => '5C',
                 'type' => 'XFJK4',
                 'latest_maintenance' => '2022-09-17',
                 'next_maintenance' => '2026-09-17',
@@ -301,7 +301,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Cylinder Head Cover',
+                'nama' => '6C',
                 'type' => 'XFJK5',
                 'latest_maintenance' => '2022-09-16',
                 'next_maintenance' => '2026-09-16',
@@ -311,7 +311,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Busi',
+                'nama' => '7C',
                 'type' => 'XFJK6',
                 'latest_maintenance' => '2022-09-15',
                 'next_maintenance' => '2026-09-15',
@@ -321,7 +321,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Intake Manifold',
+                'nama' => '8C',
                 'type' => 'XFJK7',
                 'latest_maintenance' => '2022-09-14',
                 'next_maintenance' => '2026-09-14',
@@ -331,7 +331,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '3',
-                'nama' => 'Exhaust Manifold',
+                'nama' => '9C',
                 'type' => 'XFJK8',
                 'latest_maintenance' => '2022-09-13',
                 'next_maintenance' => '2026-09-13',
@@ -341,7 +341,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Blok Silinder',
+                'nama' => '1B',
                 'type' => 'XFJK9',
                 'latest_maintenance' => '2022-09-23',
                 'next_maintenance' => '2026-09-23',
@@ -351,7 +351,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Piston',
+                'nama' => '2B',
                 'type' => 'XFJK10',
                 'latest_maintenance' => '2022-09-01',
                 'next_maintenance' => '2026-09-01',
@@ -361,7 +361,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Ring Piston',
+                'nama' => '10B',
                 'type' => 'XFJK11',
                 'latest_maintenance' => '2022-09-22',
                 'next_maintenance' => '2026-09-22',
@@ -371,7 +371,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Batang Penggerak',
+                'nama' => '13B',
                 'type' => 'XFJK12',
                 'latest_maintenance' => '2022-09-02',
                 'next_maintenance' => '2026-09-02',
@@ -381,7 +381,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Poros Engkol',
+                'nama' => '7A',
                 'type' => 'XFJK13',
                 'latest_maintenance' => '2022-09-04',
                 'next_maintenance' => '2026-09-04',
@@ -391,7 +391,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Carter/Oil Pan',
+                'nama' => '9A',
                 'type' => 'XFJK14',
                 'latest_maintenance' => '2022-09-05',
                 'next_maintenance' => '2026-09-05',
@@ -401,7 +401,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Drain Plug',
+                'nama' => '11A',
                 'type' => 'XFJK15',
                 'latest_maintenance' => '2022-09-06',
                 'next_maintenance' => '2026-09-06',
@@ -411,7 +411,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Pulley Mesin',
+                'nama' => '12A',
                 'type' => 'XFJK16',
                 'latest_maintenance' => '2022-09-06',
                 'next_maintenance' => '2026-09-06',
@@ -421,7 +421,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_mesin' => '1',
-                'nama' => 'Flywheel',
+                'nama' => '3A',
                 'type' => 'XFJK17',
                 'latest_maintenance' => '2022-09-16',
                 'next_maintenance' => '2026-09-16',

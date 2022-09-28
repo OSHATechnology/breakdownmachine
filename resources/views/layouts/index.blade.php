@@ -22,9 +22,9 @@
   <link rel="stylesheet" href="{{asset('assets')}}/css/custom.css">
   <link rel="stylesheet" href="{{asset('assets')}}/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('assets')}}/images/toyota1.png" />
+  <link rel="shortcut icon" href="{{asset('assets')}}/images/logopidi.jpeg" />
 </head>
-<body>
+<body class="sidebar-icon-only">
   <div class="container-scroller">
     @include('components.header')
     <!-- partial -->

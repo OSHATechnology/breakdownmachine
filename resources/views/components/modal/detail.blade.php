@@ -1,61 +1,43 @@
-<div class="modal fade" id="modalMachine" tabindex="-1" role="dialog" aria-labelledby="modalMachineTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="modalMachineTitle"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="card text-center">
-                <div class="card-header">
-                  <img src="{{asset('assets')}}/images/cylinder.png" style="height: auto; width: 60%;">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title" id="kode_mesin"></h5>
-                    <div class="table-responsive">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <th>Machine ID</th>
-                              <td id="id_mesin"></td>
-                            </tr>
-                            <tr>
-                              <th>Type</th>
-                              <td id="type"></td>
-                            </tr>
-                            <tr>
-                              <th>Latest Maintenance</th>
-                              <td id="latest_maintenance"></td>
-                            </tr>
-                            <tr>
-                              <th>Condition</th>
-                              <td id="condition"><label class="badge badge-primary"></label></td>
-                            </tr>
-                            <tr>
-                              <th>Breakdown Possibility</th>
-                              <td id="breakdown_possibility">
-                                <label class="badge badge-primary"></label>
-                              </td>
-                            </tr>
-                            <tr>
-                                <th>Next Maintenance</th>
-                                <td id="next_maintenance"></td>
-                              </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                  {{-- 
-                  <p class="card-text">Machine ID</p>
-                  <p class="card-text">Type</p>
-                  <p class="card-text">Latest Maintenance</p>
-                  <p class="card-text">Condition</p>
-                  <p class="card-text">Breakdown Possibility</p>
-                  <p class="card-text">Next Maintenance</p> --}}
-                </div>
-            </div>
-        </div>
-        </div>
+<div class="modal fade" id="modalMachine{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="modalMachineLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-bc">
+      <div class="modal-header text-white">
+        <h5 class="modal-title" id="exampleModalLabel">Componen Detail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-bc">
+        <ul class="list-group">
+          <li class="list-group-item modal-bc text-white d-flex justify-content-center align-items-center">
+            <img src="{{asset('assets')}}/images/cylinder.png" style="height: auto; width: 60%;">
+          </li>
+          <input type="hidden" value="{{$item->id}}" id="id_data">
+          <li class="list-group-item modal-bc text-white d-flex justify-content-between align-items-center">Machine ID
+            <span class="">{{$item->id_mesin}}</span>
+          </li>
+          <li class="list-group-item modal-bc text-white d-flex justify-content-between align-items-center">Type
+            <span class="">{{$item->type}}</span>
+          </li>
+          <li class="list-group-item modal-bc text-white d-flex justify-content-between align-items-center">Latest Maintenance
+            <span class="">{{$item->latest_maintenance}}</span>
+          </li>
+          <li class="list-group-item modal-bc text-white d-flex justify-content-between align-items-center">Condition
+            <span class="">{{$item->condition}}</span>
+          </li>
+          <li class="list-group-item modal-bc text-warning d-flex justify-content-between align-items-center">Breakdown Possibility
+            <span class="{{($item->breakdown_possibility>70) ? 'badge badge-success' : 'badge badge-danger'}}badge badge-success badge-pill">{{$item->breakdown_possibility}}%</span>
+          </li>
+          <li class="list-group-item modal-bc text-warning d-flex justify-content-between align-items-center">Next Maintenance
+            <span class="text-warning">{{$item->next_maintenance}}</span>
+          </li>
+        </ul>
+      </div>
+      @if($item->breakdown_possibility < 70)
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-warning black repair-now" id="repair-now" data-id="{{$item->id}}">Repair now!</a>
+      </div>
+      @endif
     </div>
+  </div>
 </div>

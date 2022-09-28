@@ -23,8 +23,14 @@ use Illuminate\Support\Facades\Route;
 
 // Dashboard
 Route::get('/',[DashboardController::class, 'index']);
+Route::get('/getDataMesin',[DashboardController::class, 'getDetailMachine']);
+Route::get('/index2',[DashboardController::class, 'index2']);
 Route::get('/search/{word}',[DashboardController::class, 'search']);
 Route::get('/chartDonutPossibility',[DashboardController::class, 'chartDonutPossibility']);
+Route::post('/updatePossibility',[DashboardController::class, 'updatePossibility']);
+Route::post('/repair-update',[DashboardController::class, 'repairUpdate']);
+Route::get('/finish',[DashboardController::class, 'finish']);
+
 
 // Mesin
 Route::get('/mesin',[MesinController::class, 'index']);
