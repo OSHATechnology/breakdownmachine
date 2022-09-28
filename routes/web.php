@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 // Dashboard
 Route::get('/',[DashboardController::class, 'index']);
+Route::get('/index2',[DashboardController::class, 'index2']);
 Route::get('/search/{word}',[DashboardController::class, 'search']);
 Route::get('/chartDonutPossibility',[DashboardController::class, 'chartDonutPossibility']);
 

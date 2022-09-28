@@ -27,6 +27,8 @@ class DashboardController extends Controller
                     ->get();
 
           $format_Date = date_format($date, 'd M Y');
+
+          // dd($join);
           return view('components.dashboard',compact('mesin','cmesin','dmesin', 'format_Date', 'data_possibility', 'data_maintenance'));
     }
 
@@ -52,4 +54,21 @@ class DashboardController extends Controller
 
           echo json_encode($data_possibility);
     }
+
+     public function index2(){
+          // $data = DB::table('detail_mesins')
+          //           ->where('id_mesin', '=', '1')
+          //           ->get();
+
+          $data = DetailMesin::all();
+     
+          // $join = DB::table('mesins')
+          // ->leftJoin('detail_mesins', 'mesins.id', '=', 'detail_mesins.id_mesin')
+          // ->select('*')
+          // // ->where('detail_mesins.id','=',$id)
+          // ->get();
+
+          // dd($data);
+          return view('components.dashboard2',compact('data'));
+     }
 }

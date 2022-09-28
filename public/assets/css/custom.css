@@ -4,8 +4,11 @@
 .card {
     border-radius: 8px !important;
 }
-a:hover {
+a{
     color: #fff !important;
+}
+a:hover {
+    color: #000 !important;
     text-decoration: none !important;
 }
 .card.card-light-orange {
