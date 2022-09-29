@@ -14,6 +14,11 @@ a:hover {
     color: #000 !important;
     text-decoration: none !important;
 }
+.p-cust{
+    font-size: 25px!important;
+    margin-bottom: 0!important;
+    padding: 10px!important;
+}
 a.black:hover{
     color: #fff !important;
 }

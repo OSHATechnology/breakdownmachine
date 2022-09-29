@@ -26,7 +26,7 @@
             <span class="">{{$item->condition}}</span>
           </li>
           <li class="list-group-item modal-bc text-warning d-flex justify-content-between align-items-center">Breakdown Possibility
-            <span class="{{($item->breakdown_possibility>70) ? 'badge badge-success' : 'badge badge-danger'}}badge badge-success badge-pill">{{$item->breakdown_possibility}}%</span>
+            <span class="badge {{($item->breakdown_possibility > 70) ? 'badge-success' : 'badge-danger'}} badge-pill">{{$item->breakdown_possibility}}%</span>
           </li>
           <li class="list-group-item modal-bc text-warning d-flex justify-content-between align-items-center">Next Maintenance
             <span class="text-warning">{{$item->next_maintenance}}</span>

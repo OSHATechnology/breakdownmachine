@@ -99,7 +99,7 @@ $(document).ready(function() {
                success: function(result){
                     $('.finish').html(result)
                     console.log(result)
-                    // location.reload()
+                    location.reload()
                }, 
                error: function(err) {
                     console.log(err)
